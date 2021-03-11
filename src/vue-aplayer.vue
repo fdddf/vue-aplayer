@@ -67,7 +67,7 @@
   import { deprecatedProp, versionCompare, warn } from './utils'
 
   let versionBadgePrinted = false
-  const canUseSync = versionCompare(Vue.version, '2.3.0') >= 0
+  const canUseSync = false
 
   /**
    * memorize self-adapting theme for cover image urls
@@ -792,7 +792,7 @@
       this.setSelfAdaptingTheme()
       if (this.autoplay) this.play()
     },
-    beforeDestroy () {
+    beforeUnmount () {
       if (activeMutex === this) {
         activeMutex = null
       }

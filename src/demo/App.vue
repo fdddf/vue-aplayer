@@ -24,7 +24,7 @@
         :music="{
           title: 'secret base~君がくれたもの~',
           artist: 'Silent Siren',
-          src: 'https://cn-east-17-aplayer-35525609.oss.dogecdn.com/secretbase.mp3',
+          src: 'http://pi.fdddf.com:8080/test/out.mp3',
           pic: 'https://cn-east-17-aplayer-35525609.oss.dogecdn.com/secretbase.jpg'
         }"
       />
@@ -36,8 +36,8 @@
         shuffle
         repeat="list"
         show-lrc
-        :muted.sync="muted"
-        :volume.sync="volume"
+        :muted="muted"
+        :volume="volume"
         :music='list3[0]'
         :list='list3'
       />
@@ -92,7 +92,7 @@
           {
             title: '前前前世',
             artist: 'RADWIMPS',
-            src: 'https://cn-east-17-aplayer-35525609.oss.dogecdn.com/yourname.mp3',
+            src: 'http://pi.fdddf.com:8080/test/out.mp3',
             pic: 'https://cn-east-17-aplayer-35525609.oss.dogecdn.com/yourname.jpg',
             lrc: 'https://cn-east-17-aplayer-35525609.oss.dogecdn.com/yourname.lrc',
           },

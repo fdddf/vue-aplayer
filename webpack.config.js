@@ -1,7 +1,10 @@
 var path = require('path')
 var webpack = require('webpack')
+const { VueLoaderPlugin } = require('vue-loader')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
+  mode: 'production',
   entry: './src/vue-aplayer.vue',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -10,6 +13,9 @@ module.exports = {
     libraryTarget: 'umd',
     libraryExport: 'default',
     umdNamedDefine: true
+  },
+  optimization: {
+    minimize: false
   },
 
   externals: {
@@ -64,6 +70,15 @@ module.exports = {
       {
         test: /\.html$/,
         loader: 'vue-html-loader'
+      },
+      {
+        test: /\.(css|scss)$/i,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+          "sass-loader",
+        ]
       }
     ]
   },
@@ -75,16 +90,18 @@ module.exports = {
       },
       VERSION: JSON.stringify(require('./package.json').version)
     }),
+    new VueLoaderPlugin(),
+    new MiniCssExtractPlugin()
   ]
 }
 
 if (process.env.NODE_ENV === 'production') {
   // http://vuejs.github.io/vue-loader/workflow/production.html
-  module.exports.plugins.push(
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      },
-    })
-  )
+  // module.exports.plugins.push(
+  //   new webpack.optimize.UglifyJsPlugin({
+  //     compress: {
+  //       warnings: false
+  //     },
+  //   })
+  // )
 }

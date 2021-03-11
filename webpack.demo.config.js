@@ -1,8 +1,11 @@
 var path = require('path')
 var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+const { VueLoaderPlugin } = require('vue-loader')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
+  mode: 'development',
   entry: './src/demo/main.js',
   output: {
     path: path.resolve(__dirname, 'demo'),
@@ -48,14 +51,23 @@ module.exports = {
         test: /\.html$/,
         loader: 'vue-html-loader',
       },
+      {
+        test: /\.(css|scss)$/i,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+          "sass-loader",
+        ]
+      }
     ],
   },
   devtool: '#eval-source-map',
   devServer: {
-    contentBase: path.resolve(__dirname, 'demo'),
+    static: path.resolve(__dirname, 'demo'),
     compress: true,
     port: 3000,
-    disableHostCheck: true,
+    // disableHostCheck: true,
     proxy: {
       '/aplayer': {
         target: 'https://cn-east-17-aplayer-35525609.oss.dogecdn.com/',
@@ -83,6 +95,8 @@ module.exports = {
       },
       VERSION: JSON.stringify(require("./package.json").version),
     }),
+    new VueLoaderPlugin(),
+    new MiniCssExtractPlugin()
   ],
 }
 

@@ -3,7 +3,7 @@
     <icon-button
       :class="`aplayer-icon-${volumeIcon}`"
       :icon="volumeIcon"
-      @click.native="$emit('togglemute')"
+      @click="$emit('togglemute')"
     />
     <div
       class="aplayer-volume-bar-wrap"

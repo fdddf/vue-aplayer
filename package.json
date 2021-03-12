@@ -1,12 +1,13 @@
 {
   "name": "vue3-aplayer",
-  "version": "1.7.0",
+  "version": "1.7.3",
   "description": "Easy-to-use music player for Vue 2.x",
   "main": "dist/vue-aplayer.min.js",
   "files": [
     "src",
     "!src/demo/*",
-    "dist/*.js"
+    "dist/*.js",
+    "dist/*.css"
   ],
   "scripts": {
     "start": "yarn run dev",
@@ -32,8 +33,8 @@
     "vue-compoents"
   ],
   "author": {
-    "name": "Doma",
-    "email": "leishenghao@126.com",
+    "name": "Bright",
+    "email": "viporg@126.com",
     "url": "https://github.com/fdddf"
   },
   "license": "MIT",
@@ -91,7 +92,6 @@
     }
   },
   "dependencies": {
-    "vue-loader": "^16.1.2",
-    "vue-loader-v16": "^16.0.0-beta.5.4"
+    "vue-loader": "^16.1.2"
   }
 }

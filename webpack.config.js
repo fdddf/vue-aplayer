@@ -1,7 +1,7 @@
 var path = require('path')
 var webpack = require('webpack')
 const { VueLoaderPlugin } = require('vue-loader')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   mode: 'production',
@@ -58,6 +58,7 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
+        sideEffects: false
       },
       {
         test: /\.(png|jpg)$/,
@@ -74,7 +75,8 @@ module.exports = {
       {
         test: /\.(css|scss)$/i,
         use: [
-          MiniCssExtractPlugin.loader,
+          // MiniCssExtractPlugin.loader,
+          'style-loader',
           'css-loader',
           'postcss-loader',
           "sass-loader",
@@ -82,7 +84,7 @@ module.exports = {
       }
     ]
   },
-  devtool: '#source-map',
+  // devtool: '#source-map',
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
@@ -91,7 +93,10 @@ module.exports = {
       VERSION: JSON.stringify(require('./package.json').version)
     }),
     new VueLoaderPlugin(),
-    new MiniCssExtractPlugin()
+    // new MiniCssExtractPlugin({
+    //   filename: '[name].[hash].css',
+    //   chunkFilename: '[id].[hash].css',
+    // })
   ]
 }
 

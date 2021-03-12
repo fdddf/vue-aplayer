@@ -862,11 +862,6 @@
     "@nodelib/fs.scandir" "2.1.4"
     "fastq" "^1.6.0"
 
-"@types/anymatch@*":
-  "integrity" "sha512-/+CRPXpBDpo2RK9C68N3b2cOvO0Cf5B9aPijHsoDQTHivnGSObdOF2BRQOYjojWTDy6nQvMjmqRXIxH55VjxxA=="
-  "resolved" "https://registry.npmjs.org/@types/anymatch/-/anymatch-1.3.1.tgz"
-  "version" "1.3.1"
-
 "@types/http-proxy@^1.17.4":
   "integrity" "sha512-GNkDE7bTv6Sf8JbV2GksknKOsk7OznNYHSdrtvPJXO0qJ9odZig6IZKUi5RFGi6d1bf6dgIAe4uXi3DBc7069Q=="
   "resolved" "https://registry.npmjs.org/@types/http-proxy/-/http-proxy-1.17.5.tgz"
@@ -879,13 +874,6 @@
   "resolved" "https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.7.tgz"
   "version" "7.0.7"
 
-"@types/mini-css-extract-plugin@^0.9.1":
-  "integrity" "sha512-+mN04Oszdz9tGjUP/c1ReVwJXxSniLd7lF++sv+8dkABxVNthg6uccei+4ssKxRHGoMmPxdn7uBdJWONSJGTGQ=="
-  "resolved" "https://registry.npmjs.org/@types/mini-css-extract-plugin/-/mini-css-extract-plugin-0.9.1.tgz"
-  "version" "0.9.1"
-  dependencies:
-    "@types/webpack" "*"
-
 "@types/node@*":
   "integrity" "sha512-oJqcTrgPUF29oUP8AsUqbXGJNuPutsetaa9kTQAQce5Lx5dTYWV02ScBiT/k1BX/Z7pKeqedmvp39Wu4zR7N7g=="
   "resolved" "https://registry.npmjs.org/@types/node/-/node-14.14.33.tgz"
@@ -895,44 +883,6 @@
   "integrity" "sha512-wWKOClTTiizcZhXnPY4wikVAwmdYHp8q6DmC+EJUzAMsycb7HB32Kh9RN4+0gExjmPmZSAQjgURXIGATPegAvA=="
   "resolved" "https://registry.npmjs.org/@types/retry/-/retry-0.12.0.tgz"
   "version" "0.12.0"
-
-"@types/source-list-map@*":
-  "integrity" "sha512-K5K+yml8LTo9bWJI/rECfIPrGgxdpeNbj+d53lwN4QjW1MCwlkhUms+gtdzigTeUyBr09+u8BwOIY3MXvHdcsA=="
-  "resolved" "https://registry.npmjs.org/@types/source-list-map/-/source-list-map-0.1.2.tgz"
-  "version" "0.1.2"
-
-"@types/tapable@*":
-  "integrity" "sha512-W+bw9ds02rAQaMvaLYxAbJ6cvguW/iJXNT6lTssS1ps6QdrMKttqEAMEG/b5CR8TZl3/L7/lH0ZV5nNR1LXikA=="
-  "resolved" "https://registry.npmjs.org/@types/tapable/-/tapable-1.0.6.tgz"
-  "version" "1.0.6"
-
-"@types/uglify-js@*":
-  "integrity" "sha512-EGkrJD5Uy+Pg0NUR8uA4bJ5WMfljyad0G+784vLCNUkD+QwOJXUbBYExXfVGf7YtyzdQp3L/XMYcliB987kL5Q=="
-  "resolved" "https://registry.npmjs.org/@types/uglify-js/-/uglify-js-3.13.0.tgz"
-  "version" "3.13.0"
-  dependencies:
-    "source-map" "^0.6.1"
-
-"@types/webpack-sources@*":
-  "integrity" "sha512-LXn/oYIpBeucgP1EIJbKQ2/4ZmpvRl+dlrFdX7+94SKRUV3Evy3FsfMZY318vGhkWUS5MPhtOM3w1/hCOAOXcg=="
-  "resolved" "https://registry.npmjs.org/@types/webpack-sources/-/webpack-sources-2.1.0.tgz"
-  "version" "2.1.0"
-  dependencies:
-    "@types/node" "*"
-    "@types/source-list-map" "*"
-    "source-map" "^0.7.3"
-
-"@types/webpack@*":
-  "integrity" "sha512-7ZyTfxjCRwexh+EJFwRUM+CDB2XvgHl4vfuqf1ZKrgGvcS5BrNvPQqJh3tsZ0P6h6Aa1qClVHaJZszLPzpqHeA=="
-  "resolved" "https://registry.npmjs.org/@types/webpack/-/webpack-4.41.26.tgz"
-  "version" "4.41.26"
-  dependencies:
-    "@types/anymatch" "*"
-    "@types/node" "*"
-    "@types/tapable" "*"
-    "@types/uglify-js" "*"
-    "@types/webpack-sources" "*"
-    "source-map" "^0.6.0"
 
 "@vue/compiler-core@3.0.7":
   "integrity" "sha512-JFohgBXoyUc3mdeI2WxlhjQZ5fakfemJkZHX8Gu/nFbEg3+lKVUZmNKWmmnp9aOzJQZKoj77LjmFxiP+P+7lMQ=="
@@ -2599,14 +2549,6 @@
     "ansi-styles" "^3.2.1"
     "escape-string-regexp" "^1.0.5"
     "supports-color" "^5.3.0"
-
-"chalk@^3.0.0":
-  "integrity" "sha512-4D3B6Wf41KOYRFdszmDqMCGq5VV/uMAB273JILmO+3jAlh8X4qDtdtgCR3fxtbLEMzSx22QdhnDcJvu2u1fVwg=="
-  "resolved" "https://registry.npmjs.org/chalk/-/chalk-3.0.0.tgz"
-  "version" "3.0.0"
-  dependencies:
-    "ansi-styles" "^4.1.0"
-    "supports-color" "^7.1.0"
 
 "chalk@^4.1.0":
   "integrity" "sha512-qwx12AxXe2Q5xQ43Ac//I6v5aXTipYrSESdOgzrN+9XjgEpyjpKuvSGaN4qE93f7TQTlerQQ8S+EQ0EyDoVL1A=="
@@ -7591,17 +7533,7 @@
   "resolved" "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz"
   "version" "0.6.1"
 
-"source-map@^0.7.3":
-  "integrity" "sha512-CkCj6giN3S+n9qrYiBTX5gystlENnRW5jZeNLHpe6aue+SrHcG5VYwujhW9s4dY31mEGsxBDrHR6oI69fTXsaQ=="
-  "resolved" "https://registry.npmjs.org/source-map/-/source-map-0.7.3.tgz"
-  "version" "0.7.3"
-
 "source-map@~0.6.0":
-  "integrity" "sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g=="
-  "resolved" "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz"
-  "version" "0.6.1"
-
-"source-map@~0.6.1":
   "integrity" "sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g=="
   "resolved" "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz"
   "version" "0.6.1"
@@ -8406,18 +8338,6 @@
     "html-minifier" "^2.1.5"
     "loader-utils" "^1.0.2"
     "object-assign" "^4.1.0"
-
-"vue-loader-v16@^16.0.0-beta.5.4":
-  "integrity" "sha512-sis7XW0hab2NRbWMGbYXlFwhaLE2sV/hqhVkLxV2/8XLsLL6Ylfz590IaJMSMiyqsEmFHW+fSfevnnIqOsYxoQ=="
-  "resolved" "https://registry.npmjs.org/vue-loader-v16/-/vue-loader-v16-16.0.0-beta.5.4.tgz"
-  "version" "16.0.0-beta.5.4"
-  dependencies:
-    "@types/mini-css-extract-plugin" "^0.9.1"
-    "chalk" "^3.0.0"
-    "hash-sum" "^2.0.0"
-    "loader-utils" "^1.2.3"
-    "merge-source-map" "^1.1.0"
-    "source-map" "^0.6.1"
 
 "vue-loader@^16.1.2":
   "integrity" "sha512-8QTxh+Fd+HB6fiL52iEVLKqE9N1JSlMXLR92Ijm6g8PZrwIxckgpqjPDWRP5TWxdiPaHR+alUWsnu1ShQOwt+Q=="

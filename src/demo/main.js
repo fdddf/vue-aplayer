@@ -11,10 +11,6 @@ import App from './App.vue'
 
 
 const app = createApp(App)
-app.config.disableVersionBadge = true
 app.config.devtools = true
 app.use(VueAPlayer)
 app.mount('#app')
-
-// Vue.config.devtools = true
-// VueAPlayer.disableVersionBadge = true

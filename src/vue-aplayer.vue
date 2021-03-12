@@ -59,15 +59,11 @@
   </div>
 </template>
 <script type="text/babel">
-  import Vue from 'vue'
   import Thumbnail from './components/aplayer-thumbnail.vue'
   import MusicList from './components/aplayer-list.vue'
   import Controls from './components/aplayer-controller.vue'
   import Lyrics from './components/aplayer-lrc.vue'
-  import { deprecatedProp, versionCompare, warn } from './utils'
-
-  let versionBadgePrinted = false
-  const canUseSync = false
+  import { warn } from './utils'
 
   /**
    * memorize self-adapting theme for cover image urls
@@ -282,7 +278,7 @@
           return this.internalMusic
         },
         set (val) {
-          canUseSync && this.$emit('update:music', val)
+          this.$emit('update:music', val)
           this.internalMusic = val
         },
       },
@@ -353,7 +349,7 @@
           return this.internalMuted
         },
         set (val) {
-          canUseSync && this.$emit('update:muted', val)
+          this.$emit('update:muted', val)
           this.internalMuted = val
         },
       },
@@ -362,7 +358,7 @@
           return this.internalVolume
         },
         set (val) {
-          canUseSync && this.$emit('update:volume', val)
+          this.$emit('update:volume', val)
           this.internalVolume = val
         },
       },
@@ -375,7 +371,7 @@
           return this.internalShuffle
         },
         set (val) {
-          canUseSync && this.$emit('update:shuffle', val)
+          this.$emit('update:shuffle', val)
           this.internalShuffle = val
         },
       },
@@ -393,7 +389,7 @@
           }
         },
         set (val) {
-          canUseSync && this.$emit('update:repeat', val)
+          this.$emit('update:repeat', val)
           this.internalRepeat = val
         },
       },
@@ -776,13 +772,6 @@
       repeat (val) {
         this.internalRepeat = val
       },
-    },
-    beforeCreate () {
-      if (!VueAPlayer.disableVersionBadge && !versionBadgePrinted) {
-        // version badge
-        console.log(`\n\n %c Vue-APlayer ${VERSION} %c vue-aplayer.js.org \n`, 'color: #fff; background:#41b883; padding:5px 0;', 'color: #fff; background: #35495e; padding:5px 0;')
-        versionBadgePrinted = true
-      }
     },
     created () {
       this.shuffledList = this.getShuffledList()

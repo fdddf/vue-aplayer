@@ -7,6 +7,12 @@
 [**Demo**](https://sevenoutman.github.io/vue-aplayer)
 
 
+## Install
+```
+npm i vue3-aplayer
+```
+
+
 [![Travis](https://img.shields.io/travis/SevenOutman/vue-aplayer.svg?style=flat-square)](https://travis-ci.org/SevenOutman/vue-aplayer)
 [![npm](https://img.shields.io/npm/v/vue-aplayer.svg?style=flat-square)](https://www.npmjs.com/package/vue-aplayer)
 [![npm](https://img.shields.io/npm/dt/vue-aplayer.svg?style=flat-square)](https://www.npmjs.com/package/vue-aplayer)
